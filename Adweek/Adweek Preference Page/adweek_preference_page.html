@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Newsletter Preferences</title>
+     <link type="text/css" rel="stylesheet" media="all" href="http://www.adweek.com/files/css/css_2bbb04441397e6481c98353cb475ef39.css" />
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+  </head>
+
+<style>
+/*----------------------------------------------------------------------------- 
+ GENERAL 
+-----------------------------------------------------------------------------*/
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #000000;
+  line-height: 1.1;
+}
+
+
+a {
+  text-decoration:none;
+}
+
+  a:hover {
+    text-decoration:underline;
+  }
+
+p {
+    margin:30px 0 15px 0; 
+    font-size: 14px; 
+}
+
+h1 {
+    font-size: 59px;
+    margin-top: 20px;
+    font-weight: bold;
+    background-color: #fff;
+}
+
+/*----------------------------------------------------------------------------- 
+ LAYOUT STYLES
+-----------------------------------------------------------------------------*/
+
+.container, .nav {
+  margin:0 auto;
+  padding: 0 auto;
+  width:960px;
+}
+
+.logo {
+  width: 960px;
+  margin:20px auto 10px auto;
+}
+
+.heading {
+}
+
+.bottom-border{
+    height: 10px;
+    background-color: #efefef;
+    border-bottom: 1px solid #D7D7D7;
+}
+
+.fieldset {
+    border-top: 4px solid #000;
+    border-bottom: 1px solid #BFBFBF;
+    margin: 26px 0 0 0;
+    clear: both;
+} 
+
+.fieldset h2 {
+    padding: 7px 0 6px 7px;
+    font: normal 20px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: none repeat scroll 0 0 #eee;
+}
+
+/*----------------------------------------------------------------------------- 
+ COLUMN STYLES
+-----------------------------------------------------------------------------*/
+
+.select-box {
+    float: left;
+    width: 420px;
+    margin: 20px;
+}
+    .select-box .selection-heading {
+        margin: 0 0 12px 0;
+        padding: 3px 0 6px;
+        color: #333; 
+    }
+
+    .select-box .selection-heading {
+        font: bold 18px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+        border-bottom: 1px solid #CCCCCC;     
+    }
+
+    .select-box .form-checkboxes label {
+        font-size: 14px;
+    }
+
+    .select-box .last {
+        margin-top: -30px;
+    }
+
+.form-item {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+    .form-item .description {
+        color: #808080;
+        font-size: 14px; 
+        margin-left: 24px;
+        margin-bottom: 20px;
+    }
+
+    .form-checkboxes .form-item {
+        margin-bottom: 1em;
+    }
+
+/*----------------------------------------------------------------------------- 
+ CHECKBOX STYLES
+-----------------------------------------------------------------------------*/
+
+input[type=checkbox] {
+    margin: 0 8px 8px 0;
+    -webkit-appearance: checkbox;
+    box-sizing: border-box;
+}
+input {
+    margin: 0em;
+    font: -webkit-small-control;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+}
+
+/*----------------------------------------------------------------------------- 
+ SUBMISSION STYLES
+-----------------------------------------------------------------------------*/
+
+#submission {
+    margin: 0 20px 100px 20px;
+}
+
+.fieldset_submit, .unsubscribe, .message {
+    margin: 10px 10px 10px 0; 
+}
+    .fieldset_submit input {
+        display: block;
+        height: 52px;
+        width: 150px;
+        padding: 13px 12px 15px 12px;
+        text-align: center;
+        font: bold 18px/18px Arial,sans-serif;
+        color: #fff;
+        background-color: #ed1d25;
+        border: none;
+    }
+
+    .fieldset_submit input:hover {
+        text-decoration: underline;
+        background-color: #ba141a;
+    }
+
+.unsubscribe input, .optout-all input {
+    display: block;
+    height: 52px;
+    width: 150px;
+    padding: 13px 12px 15px 12px;
+    text-align: center;
+    font: bold 18px/18px Arial,sans-serif;
+    color: #fff;
+    background-color: #8e8e8e;
+    border: none;
+}
+
+    .unsubscribe input:hover, .optout-all input:hover{
+        text-decoration: underline;
+        background-color: #000000;
+    }
+
+/*----------------------------------------------------------------------------- 
+MISC 
+-----------------------------------------------------------------------------*/
+
+.clear {
+  clear:both; 
+}
+</style>
+
+<body>
+<!-- LOGO -->
+    <div class="logo">
+        <a href="#" target="_blank">
+             <img src="http://www.adweek.com/sites/all/themes/aw/images/sitewide/logo.png" alt="Adweek Logo">
+        </a>
+    </div><!-- end of .logo -->
+    <div id="header-tools" class="nav">
+        <ul id="nav">
+            <li><a href="http://www.adweek.com/press" target="_blank" class="press" onclick="_gaq.push(['_trackEvent', 'Navigation', 'Press', '/press']);">The Press</a></li>
+            <li><a href="http://www.adweek.com/television" target="_blank" class="tv" onclick="_gaq.push(['_trackEvent', 'Navigation', 'TV', '/television']);">Television</a></li>
+            <li><a href="http://www.adweek.com//technology" target="_blank" class="tech" onclick="_gaq.push(['_trackEvent', 'Navigation', 'Tech', '/technology']);">Technology</a></li>
+            <li><a href="http://www.adweek.com/advertising-branding" target="_blank" class="ads" onclick="_gaq.push(['_trackEvent', 'Navigation', 'Ads', '/advertising-branding']);">Advertising &amp; Branding</a></li>
+            <li class="section"><a href="http://www.adweek.com/adfreak"   class="adfreak" onclick="_gaq.push(['_trackEvent', 'Navigation', 'Adfreek', '/adfreak']);">Adfreak</a></li>
+            <li class="section"><a href="http://www.adweek.com/videos" target="_blank" class="video" onclick="_gaq.push(['_trackEvent', 'Navigation', 'Video', '/videos']);">Video</a></li>
+        </ul><!-- end of #nav -->
+    </div><!-- end of header-tools -->
+
+    <div class="clear"></div>
+
+
+  <div class="container">
+    <form method="post">
+        <div class="heading">
+            <h1>Newsletter Preferences</h1>
+            <div class="bottom-border"></div>
+        </div>
+        <div class="fieldset">
+            <h2 class='fieldset-title'>
+                You are subscribed to Adweek as {profile.email}. Check or uncheck below to update your subscriptions.
+            </h2> 
+        </div>
+          
+            <div class="select-box">
+                <h3 class="selection-heading">Daily Newsletters:</h3>
+                <div class="form-checkboxes">
+                    <div class="form-item" id="edit-daily-newsletters-5-wrapper">
+                        <label class="option" for="edit-daily-newsletters-5">
+                            <input type="checkbox" name="lists[Advertising & Branding]" id="edit-daily-newsletters-5"   class="form-checkbox" /> 
+                                Advertising & Branding
+                                <div class="clear"></div>
+                                <span class="description">The quick brown fox jumped over the lazy dog.</span>
+                        </label>
+                    </div><!-- end of .form-item and #edit-daily-newsletters-5-wrapper -->
+                    <div class="form-item" id="edit-daily-newsletters-3-wrapper">
+                        <label class="option" for="edit-daily-newsletters-3">
+                            <input type="checkbox" name="lists[Television Today]" id="edit-daily-newsletters-3"   class="form-checkbox" /> 
+                                Television Today
+                                <div class="clear"></div>
+                                <span class="description">News about the hotest ads on tv today.</span>
+                        </label>
+                    </div>
+                    <div class="form-item" id="edit-daily-newsletters-4-wrapper">
+                        <label class="option" for="edit-daily-newsletters-4">
+                            <input type="checkbox" name="lists[Technology Today]" id="edit-daily-newsletters-4" class="form-checkbox" /> 
+                                Technology Today
+                                <div class="clear"></div>
+                                <span class="description">The quick brown fox jumped over the lazy dog.</span>
+                        </label>
+                    </div>
+                    <div class="form-item" id="edit-daily-newsletters-1-wrapper">
+                        <label class="option" for="edit-daily-newsletters-1">
+                            <input type="checkbox" name="lists[Adweek Daily Digest]" id="edit-daily-newsletters-1" class="form-checkbox" /> 
+                                Adweek Daily Digest
+                                <div class="clear"></div>
+                                <span class="description">The quick brown fox jumped over the lazy dog.</span>
+                        </label>
+                    </div>
+                    <div class="form-item" id="edit-daily-newsletters-12-wrapper">
+                        <label class="option" for="edit-daily-newsletters-12">
+                            <input type="checkbox" name="lists[The AdFreak Daily]" id="edit-daily-newsletters-12" class="form-checkbox" /> 
+                                The AdFreak Daily
+                                <div class="clear"></div>
+                                <span class="description">The quick brown fox jumped over the lazy dog.</span>
+                        </label>
+                    </div><!-- end of .form-item #dit-daily-newsletters-12-wrapper -->
+                </div><!-- end of .form-checkboxes -->
+            </div><!-- end of .form-item -->
+            <div class="select-box">
+                <h3 class="selection-heading">Breaking News:</h3>
+                <div class="form-checkboxes">
+                    <div class="form-item" id="edit-breaking-news-10-wrapper">
+                        <label class="option" for="edit-breaking-news-10">
+                            <input type="checkbox" name="lists[The Adweek Alert]" id="edit-breaking-news-10" class="form-checkbox" /> 
+                                The Adweek Alert
+                                <div class="clear"></div>
+                                <span class="description">The quick brown fox jumped over the lazy dog.</span>
+                        </label>
+                    </div><!-- end of .form-item #edit-breaking-news-10-wrapper -->
+                </div><!-- end of .form-checkboxes -->
+            </div><!-- end of .form-item -->
+            <div class="select-box">
+                <h3 class="selection-heading last">Special Coverage:</h3>
+                <div class="form-checkboxes">
+                    <div class="form-item" id="edit-special-coverage-2-wrapper">
+                        <label class="option" for="edit-special-coverage-2">
+                            <input type="checkbox" name="lists[Brandweek Report]" id="edit-special-coverage-2" class="form-checkbox" /> 
+                            Brandweek Report
+                                <div class="clear"></div>
+                                <span class="description">The quick brown fox jumped over the lazy dog.</span>
+                        </label>
+                    </div>
+                    <div class="form-item" id="edit-special-coverage-7-wrapper">
+                        <label class="option" for="edit-special-coverage-7">
+                            <input type="checkbox" name="lists[The Daily Upfront (March-May)]" id="edit-special-coverage-7" class="form-checkbox" /> 
+                            The Daily Upfront (March-May)
+                                <div class="clear"></div>
+                                <span class="description">The quick brown fox jumped over the lazy dog.</span>
+                        </label>
+                    </div><!-- end of .form-item #edit-special-coverage-7-wrapper -->
+                </div><!-- end of .form-checkboxes -->
+            </div><!-- end of .form-item -->
+            
+        <div class="clear"></div>
+
+<!-- Submission -->
+    <div id="submission">
+        <div class="fieldset_submit">
+            <input type="submit" id="edit-submit" value="Sign Up Now"  class="form-submit" />
+        </div>
+        <div class="unsubscribe">
+            <p>To unsubscribe from AdWeek newsletters click the "Unsubscribe" button below.</p>
+                <form action="" method="post">
+                    <input type="hidden" name =".optout_blast" value="1" />
+                    <input name="action" value="Unsubscribe" type="submit" />
+                </form>
+        </div>
+        <div class="message optout-all">
+            <p>If you wish to prevent ALL email contact from AdWeek,
+            including forgotten password requests, etc, please click on the "Do Not Email" button below.</p>
+            <form action="" method="post">
+                <input type="hidden" name =".optout_all" value="1" />
+                <input name="action" value="Do Not Email" type="submit" />
+            </form>
+        </div><!-- end of .message optout-all -->
+    </div><!-- end of #submission -->
+
+
+    </form>
+  </div><!-- end of container -->
+</body>
+</html>

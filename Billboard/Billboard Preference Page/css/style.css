@@ -1,0 +1,256 @@
+/*----------------------------------------------------------------------------- 
+ FONTS 
+-----------------------------------------------------------------------------*/
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Sans'), local('PTSans-Regular'), url(http://themes.googleusercontent.com/static/fonts/ptsans/v5/7YGmE4Ls5b94ct65u07hVQLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'PT Sans Caption';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Sans Caption'), local('PTSans-Caption'), url(http://themes.googleusercontent.com/static/fonts/ptsanscaption/v6/OXYTDOzBcXU8MTNBvBHeSZsUyLnvNVEr3YfO1b3hweY.woff) format('woff');
+}
+
+/*----------------------------------------------------------------------------- 
+ GENERAL 
+-----------------------------------------------------------------------------*/
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #000000;
+  line-height: 1.1;
+}
+
+
+a {
+  text-decoration:none;
+}
+
+  a:hover {
+    text-decoration:underline;
+  }
+
+p {
+    margin:30px 0 15px 0; 
+    font-size: 14px; 
+}
+
+h1 {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 45px;
+    margin-top: 20px;
+    font-weight: 400;
+    background-color: #fff;
+    letter-spacing: 1px;
+}
+
+nav {
+    margin: 50px auto 50px auto;
+    padding: 0 auto;
+    width:960px;
+}
+
+    nav img {
+        background: #fff;
+        width: 300px;
+        float: left;
+    }
+ul {
+    margin-top: 42px;
+}
+
+li a {
+    color: #000;
+    border: 2px solid transparent;
+    padding: 8px 8px 4px;
+    color: #1a1a1a;
+    margin: 0 -2px 0 0;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    line-height: 20px;
+    font-size: 16px;
+}
+
+    li a:hover {
+        text-decoration: none;
+        border: 2px solid #000;
+    }
+
+/*----------------------------------------------------------------------------- 
+ LAYOUT STYLES
+-----------------------------------------------------------------------------*/
+
+.nav {
+    float: left;
+    margin-left: -10px;
+}
+    .nav li {
+        list-style: none;
+        float: left;
+        font-family: 'PT Sans Caption', sans-serif;
+        text-transform: uppercase;
+        display: block;
+    }
+
+.container {
+  margin:0 auto;
+  padding: 0 auto;
+  width:960px;
+}
+
+.heading {
+    margin-top: 40px;
+}
+
+.fieldset h2 {
+    padding: 12px 0 12px 7px;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    background: none repeat scroll 0 0 #eee;
+    border-top: 4px solid #000;
+    border-bottom: 1px solid #BFBFBF;
+    margin: 26px 0 0 0;
+    clear: both;
+}
+
+/*----------------------------------------------------------------------------- 
+ COLUMN STYLES
+-----------------------------------------------------------------------------*/
+
+.select-box {
+    float: left;
+    width: 420px;
+    margin: 20px;
+}
+    .select-box .selection-heading {
+        margin: 0 0 12px 0;
+        padding: 3px 0 6px;
+        color: #333; 
+    }
+
+    .select-box .selection-heading {
+        font: bold 18px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+        border-bottom: 1px solid #CCCCCC;     
+    }
+
+    .select-box .form-checkboxes label {
+        font-size: 16px;
+    }
+
+    .select-box .last {
+        margin-top: -30px;
+    }
+
+.form-item {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+    .form-item .description {
+        color: #808080;
+        font-size: 14px; 
+        margin-left: 24px;
+        margin-bottom: 15px;
+    }
+
+    .form-checkboxes .form-item {
+        margin-bottom: 1em;
+    }
+
+.description {
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.option {
+    font-family: 'PT Sans', sans-serif;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+/*----------------------------------------------------------------------------- 
+ CHECKBOX STYLES
+-----------------------------------------------------------------------------*/
+
+input[type=checkbox] {
+    margin: 0 8px 8px 0;
+    -webkit-appearance: checkbox;
+    box-sizing: border-box;
+}
+input {
+    margin: 0em;
+    font: -webkit-small-control;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+}
+
+/*----------------------------------------------------------------------------- 
+ SUBMISSION STYLES
+-----------------------------------------------------------------------------*/
+
+#submission {
+    margin: -30px 20px 100px 20px;
+}
+
+.fieldset_submit, .unsubscribe, .message {
+    margin: 10px 10px 10px 0; 
+}
+    .fieldset_submit input {
+        display: block;
+        height: 52px;
+        width: 150px;
+        padding: 13px 12px 15px 12px;
+        text-align: center;
+        font: bold 18px/18px 'PT Sans',Arial,sans-serif;
+        color: #fff;
+        background-color: #00ABE4;
+        border: none;
+        letter-spacing: 1px;
+        font-weight: 400;
+    }
+
+    .fieldset_submit input:hover {
+        text-decoration: underline;
+        background-color: #25aad0;
+    }
+
+.unsubscribe input, .optout-all input {
+    display: block;
+    height: 52px;
+    width: 150px;
+    padding: 13px 12px 15px 12px;
+    text-align: center;
+    font: bold 18px/18px 'PT Sans',Arial,sans-serif;
+    color: #fff;
+    background-color: #000;
+    border: none;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+    .unsubscribe input:hover, .optout-all input:hover{
+        text-decoration: underline;
+        background-color: #8e8e8e;
+    }
+
+/*----------------------------------------------------------------------------- 
+MISC 
+-----------------------------------------------------------------------------*/
+
+.clear {
+  clear:both; 
+}

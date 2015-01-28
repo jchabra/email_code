@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <style type="text/css" media="screen">
+            @import "//sailthru.com/css/link.css";
+            .logo img {
+                width: 400px;
+            }
+        </style>
+    </head>
+    
+    <body style="font-family:Arial, Helvetica, sans-serif;">
+        <div id="wrapper">
+
+            <div id="name" class="invite logo">
+               <a href="http://www.buzznet.com/"><img src="http://email-media.s3.amazonaws.com/buzznet/logo.png" /></a>
+            </div>
+            <div id="content">
+                <h2><span class="email">{profile.email}</span></h2><br />
+                
+
+                <p>To unsubscribe, see the options below.</p>
+
+                {if profile.optout=="all"}
+                <div class="message alert optout-all">
+                    <p>You will no longer receive any email of any kind from Buzznet.</p>
+                    <p>If you would prefer to start receiving mail again, please press the "Opt Back In" button below.</p>
+                    <form action="" method="post">
+                        <input name="action" value="Opt Back In" type="submit" />
+                    </form>
+                </div>
+                {else if profile.optout=="blast"}
+                <div class="message alert optout-blast">
+                    <p>You have opted out. You will no longer receive any marketing emails from Buzznet. To resubscribe, click the "Opt Back In" button below.</p>
+                    <form action="" method="post">
+                        <input name="action" value="Opt Back In" type="submit" />
+                    </form>
+                </div>
+                {else}
+                {if contains(profile.lists, "SUBLIST_DailyBuzznet")}
+                    <div class="message optout">
+                        <p>You are currently subscribed to <b>Daily Buzznet</b> emails. To unsubscribe from <b>Daily Buzznet</b>, please confirm by clicking "unsubscribe" below.</p>
+                        <form action="" method="post">
+                            <input type="hidden" name="lists[SUBLIST_DailyBuzznet]" value=0 />
+                            <input type="hidden" name="lists[DailyBuzznet_Unsub]" value=1 />
+                            <input type="submit" value="Unsubscribe" name="action" />
+                        </form>
+                        </div>
+                    {else if contains(profile.lists, "DailyBuzznet_Unsub")}
+                    <div class="message optout">
+                        <p>You have opted out from <b>Daily Buzznet</b> emails. To opt back in, click the "Opt Back In" button below.</p>
+                        <form action="" method="post">
+                            <input type="hidden" name="lists[SUBLIST_DailyBuzznet]" value=1 />
+                            <input type="hidden" name="lists[DailyBuzznet_Unsub]" value=0 />
+                            <input type="submit" value="Opt Back In" name="action" />
+                        </form>
+                    </div>
+                {/if}
+
+                {if contains(profile.lists, "SUBLIST_WeeklyNewsletter")}
+                    <div class="message optout">
+                        <p>You are currently subscribed to <b>Weekly Newsletter</b> emails. To unsubscribe from <b>Weekly Newsletters</b>, please confirm by clicking "unsubscribe" below.</p>
+                        <form action="" method="post">
+                            <input type="hidden" name="lists[SUBLIST_WeeklyNewsletter]" value=0 />
+                            <input type="hidden" name="lists[WeeklyNewsletter_Unsub]" value=1 />
+                            <input type="submit" value="Unsubscribe" name="action" />
+                        </form>
+                    </div>
+                    {else if contains(profile.lists, "WeeklyNewsletter_Unsub")}
+                    <div class="message optout">
+                        <p>You have opted out from <b>Weekly Newsletter</b> emails. To opt back in, click the "Opt Back In" button below.</p>
+                        <form action="" method="post">
+                            <input type="hidden" name="lists[SUBLIST_WeeklyNewsletter]" value=1 />
+                            <input type="hidden" name="lists[WeeklyNewsletter_Unsub]" value=0 />
+                            <input type="submit" value="Opt Back In" name="action" />
+                        </form>
+                    </div>
+                {/if}
+                
+                {if contains(profile.lists, "SUBLIST_NewsUpdates")}
+                    <div class="message optout">
+                        <p>You are currently subscribed to <b>News Updates</b> emails. To unsubscribe from <b>News Updates</b>, please confirm by clicking "unsubscribe" below.</p>
+                        <form action="" method="post">
+                            <input type="hidden" name="lists[SUBLIST_NewsUpdates]" value=0 />
+                            <input type="hidden" name="lists[NewsUpdates_Unsub]" value=1 />
+                            <input type="submit" value="Unsubscribe" name="action" />
+                        </form>
+                    </div>
+                    {else if contains(profile.lists, "NewsUpdates_Unsub")}
+                    <div class="message optout">
+                        <p>You have opted out from <b>News Updates</b> emails. To opt back in, click the "Opt Back In" button below.</p>
+                        <form action="" method="post">
+                            <input type="hidden" name="lists[SUBLIST_NewsUpdates]" value=1 />
+                            <input type="hidden" name="lists[NewsUpdates_Unsub]" value=0 />
+                            <input type="submit" value="Opt Back In" name="action" />
+                        </form>
+                    </div>
+                {/if}
+                <div class="message optout-all">
+                    <p>If you wish to prevent ALL email contact from Buzznet, including forgotten password requests, etc, please click on the "Do Not Email" button below.</p>
+                    <form action="" method="post">
+                        <input type="hidden" name =".optout_all" value="1" />
+                        <input name="action" value="Do Not Email" type="submit" />
+                    </form>
+
+                </div>
+            </div>
+    </body>
+</html>

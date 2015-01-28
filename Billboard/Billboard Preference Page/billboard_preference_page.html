@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Newsletter Preferences</title>
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+  </head>
+
+<style>
+/*----------------------------------------------------------------------------- 
+ FONTS 
+-----------------------------------------------------------------------------*/
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Sans'), local('PTSans-Regular'), url(http://themes.googleusercontent.com/static/fonts/ptsans/v5/7YGmE4Ls5b94ct65u07hVQLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'PT Sans Caption';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Sans Caption'), local('PTSans-Caption'), url(http://themes.googleusercontent.com/static/fonts/ptsanscaption/v6/OXYTDOzBcXU8MTNBvBHeSZsUyLnvNVEr3YfO1b3hweY.woff) format('woff');
+}
+
+/*----------------------------------------------------------------------------- 
+ GENERAL 
+-----------------------------------------------------------------------------*/
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #000000;
+  line-height: 1.1;
+}
+
+
+a {
+  text-decoration:none;
+}
+
+  a:hover {
+    text-decoration:underline;
+  }
+
+p {
+    margin:30px 0 15px 0; 
+    font-size: 14px; 
+}
+
+h1 {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 45px;
+    margin-top: 20px;
+    font-weight: 400;
+    background-color: #fff;
+    letter-spacing: 1px;
+}
+
+nav {
+    margin: 50px auto 50px auto;
+    padding: 0 auto;
+    width:960px;
+}
+
+    nav img {
+        background: #fff;
+        width: 300px;
+        float: left;
+    }
+ul {
+    margin-top: 42px;
+}
+
+li a {
+    color: #000;
+    border: 2px solid transparent;
+    padding: 8px 8px 4px;
+    color: #1a1a1a;
+    margin: 0 -2px 0 0;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    line-height: 20px;
+    font-size: 16px;
+}
+
+    li a:hover {
+        text-decoration: none;
+        border: 2px solid #000;
+    }
+
+/*----------------------------------------------------------------------------- 
+ LAYOUT STYLES
+-----------------------------------------------------------------------------*/
+
+.nav {
+    float: left;
+    margin-left: -10px;
+}
+    .nav li {
+        list-style: none;
+        float: left;
+        font-family: 'PT Sans Caption', sans-serif;
+        text-transform: uppercase;
+        display: block;
+    }
+
+.container {
+  margin:0 auto;
+  padding: 0 auto;
+  width:960px;
+}
+
+.heading {
+    margin-top: 40px;
+}
+
+.fieldset h2 {
+    padding: 12px 0 12px 7px;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    background: none repeat scroll 0 0 #eee;
+    border-top: 4px solid #000;
+    border-bottom: 1px solid #BFBFBF;
+    margin: 26px 0 0 0;
+    clear: both;
+}
+
+/*----------------------------------------------------------------------------- 
+ COLUMN STYLES
+-----------------------------------------------------------------------------*/
+
+.select-box {
+    float: left;
+    width: 420px;
+    margin: 20px;
+}
+    .select-box .selection-heading {
+        margin: 0 0 12px 0;
+        padding: 3px 0 6px;
+        color: #333; 
+    }
+
+    .select-box .selection-heading {
+        font: bold 18px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+        border-bottom: 1px solid #CCCCCC;     
+    }
+
+    .select-box .form-checkboxes label {
+        font-size: 16px;
+    }
+
+    .select-box .last {
+        margin-top: -30px;
+    }
+
+.form-item {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+    .form-item .description {
+        color: #808080;
+        font-size: 14px; 
+        margin-left: 24px;
+        margin-bottom: 15px;
+    }
+
+    .form-checkboxes .form-item {
+        margin-bottom: 1em;
+    }
+
+.description {
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.option {
+    font-family: 'PT Sans', sans-serif;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+/*----------------------------------------------------------------------------- 
+ CHECKBOX STYLES
+-----------------------------------------------------------------------------*/
+
+input[type=checkbox] {
+    margin: 0 8px 8px 0;
+    -webkit-appearance: checkbox;
+    box-sizing: border-box;
+}
+input {
+    margin: 0em;
+    font: -webkit-small-control;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+}
+
+/*----------------------------------------------------------------------------- 
+ SUBMISSION STYLES
+-----------------------------------------------------------------------------*/
+
+#submission {
+    margin: -30px 20px 100px 20px;
+}
+
+.fieldset_submit, .unsubscribe, .message {
+    margin: 10px 10px 10px 0; 
+}
+    .fieldset_submit input {
+        display: block;
+        height: 52px;
+        width: 150px;
+        padding: 13px 12px 15px 12px;
+        text-align: center;
+        font: bold 18px/18px 'PT Sans',Arial,sans-serif;
+        color: #fff;
+        background-color: #00ABE4;
+        border: none;
+        letter-spacing: 1px;
+        font-weight: 400;
+    }
+
+    .fieldset_submit input:hover {
+        text-decoration: underline;
+        background-color: #25aad0;
+    }
+
+.unsubscribe input, .optout-all input {
+    display: block;
+    height: 52px;
+    width: 150px;
+    padding: 13px 12px 15px 12px;
+    text-align: center;
+    font: bold 18px/18px 'PT Sans',Arial,sans-serif;
+    color: #fff;
+    background-color: #000;
+    border: none;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+    .unsubscribe input:hover, .optout-all input:hover{
+        text-decoration: underline;
+        background-color: #8e8e8e;
+    }
+
+/*----------------------------------------------------------------------------- 
+MISC 
+-----------------------------------------------------------------------------*/
+
+.clear {
+  clear:both; 
+}
+</style>
+
+<body>
+<!-- LOGO and NAV-->
+
+<nav>
+    <div id="logo">
+        <a href="http://www.billboard.com/"><img src="http://email-media.s3.amazonaws.com/billboard/bb_logo.png" alt="Billboard Logo"></a>
+    </div><!-- end of #logo -->
+    <div class="nav">
+        <ul>
+            <li><a href="http://www.billboard.com/videos" target="_blank">VIDEOS</a></li>
+            <li><a href="http://www.billboard.com/photos" target="_blank">PHOTOS</a></li>
+            <li><a href="http://www.billboard.com/articles" target="_blank">ARTICLES</a></li>
+            <li><a href="http://www.billboard.com/artists/" target="_blank">ARTISTS</a></li>
+        </ul>
+    </div><!-- end of .nav -->
+</nav>
+    
+<div class="clear"></div>
+
+
+<div class="container">
+<form method="post">
+    <div class="heading">
+        <h1>Newsletter Preferences</h1>
+    </div>
+    <div class="fieldset">
+        <h2 class='fieldset-title'>
+            You are subscribed to Billboard as {profile.email}. Check or uncheck below to update your subscriptions.
+        </h2> 
+    </div>
+      
+        <div class="select-box">
+            <div class="form-checkboxes">
+                <div class="form-item">
+                    <label class="option">
+                        <input type="checkbox" name="lists[]" class="form-checkbox" /> 
+                            Morning Fix
+                            <div class="clear"></div>
+                            <span class="description">A link-filled digest of all the latest music-business news - from Billboard and around the web - to start your day. Emailed (and posted on Billboard.biz) every weekday morning.</span>
+                    </label>
+                </div><!-- end of .form-item and #edit-daily-newsletters-5-wrapper -->
+                <div class="form-item">
+                    <label class="option">
+                        <input type="checkbox" name="lists[BB_BIZ_BREAKINGNEWS]" class="form-checkbox">
+                            Breaking News Alert
+                            <div class="clear"></div>
+                            <span class="description">News you need to know immediately about the business and the people in it, from news flashes to analyses of developing stories.</span>
+                    </label>
+                </div>
+                <div class="form-item">
+                    <label class="option">
+                        <input type="checkbox" name="lists[BB_BIZ_TOP_40_UPDATE]" class="form-checkbox"> 
+                            Top 40 Update 
+                            <div class="clear"></div>
+                            <span class="description">A twice-weekly e-mail with the latest airplay, sales and socialcharts, along with in-depth editorial covering radio and the music industry, with compelling analysis of market trends and conditions. E-mailed every Monday and Thursday.</span>
+                    </label>
+                </div>
+                <div class="form-item">
+                    <label class="option">
+                        <input type="checkbox" name="lists[BB_BIZ_COUNTRY]" class="form-checkbox"> 
+                            Country Music Update 
+                            <div class="clear"></div>
+                            <span class="description">A twice weekly e-mail with the latest airplay, sales and streaming charts along cutting edge editorial and compelling analysis of market trends and conditions, led by Billboard Country Update editor Tom Roland and senior chart manager Wade Jessen.</span>
+                    </label>
+                </div>
+                <div class="form-item">
+                    <label class="option">
+                        <input type="checkbox" name="lists[BB_BIZ_DIGITAL]" class="form-checkbox" /> 
+                            Digital Update 
+                            <div class="clear"></div>
+                            <span class="description">From Apple to Spotify, from Soundcloud to Songkick and beyond, theDigital Update - sent every Wednesday - provides in-depth news and analysis on developing digital and mobile trends across the entertainment space.</span>
+                    </label>
+                </div><!-- end of .form-item #dit-daily-newsletters-12-wrapper -->
+            </div><!-- end of .form-checkboxes -->
+        </div><!-- end of .form-item -->
+        <div class="select-box">
+            <div class="form-checkboxes">
+                <div class="form-item">
+                    <label class="option">
+                        <input type="checkbox" name="lists[BB_BIZ_GLOBAL]" class="form-checkbox" /> 
+                            Global Update
+                            <div class="clear"></div>
+                            <span class="description">E-mailed every Tuesday, the Global Update includes the most critical music industry news outside of the United States, from what's topping the U.K. charts to new deals in developing markets like China and Korea.</span>
+                    </label>
+                </div><!-- end of .form-item #edit-breaking-news-10-wrapper -->
+                <div class="form-item">
+                    <label class="option">
+                        <input type="checkbox" name="lists[BB_BIZ_LATIN]" class="form-checkbox" /> 
+                        Latin Update
+                            <div class="clear"></div>
+                            <span class="description">Delivered every Thursday, the Latin Update gives a deep look into today's growing Latin music and entertainment sectors, providing expert insight on top artists and companies in the genre.</span>
+                    </label>
+                </div>
+                <div class="form-item">
+                    <label class="option">
+                        <input type="checkbox" name="lists[BB_BIZ_RECORDLABEL]" class="form-checkbox" /> 
+                        Record Labels
+                            <div class="clear"></div>
+                            <span class="description">E-mailed every Friday, the Record Labels Update gives the latest news and analysis on the ever-changing world of record labels and retailers.</span>
+                    </label>
+                </div><!-- end of .form-item #edit-special-coverage-7-wrapper -->
+                <div class="form-item">
+                    <label class="option">
+                        <input type="checkbox" name="lists[BB_BIZ_TOURING]" class="form-checkbox" /> 
+                        Touring Update 
+                            <div class="clear"></div>
+                            <span class="description">As more artists rely on touring as their main source of revenue, the Touring Update is e-mailed each Thursday. You won't miss a beat on the latest developments in the live-entertainment industry, with the latest on promotion companies, booking agencies, management firms, concert venues and more.</span>
+                    </label>
+                </div><!-- end of .form-item #edit-special-coverage-7-wrapper -->
+            </div><!-- end of .form-checkboxes -->
+        </div><!-- end of .form-item -->
+        
+    <div class="clear"></div>
+
+<!-- Submission -->
+<div id="submission">
+    <div class="fieldset_submit">
+        <input type="submit" id="edit-submit" value="Sign Up Now"  class="form-submit" />
+    </div>
+    <div class="unsubscribe">
+        <p>To unsubscribe from Billboard newsletters click the "Unsubscribe" button below.</p>
+            <form action="" method="post">
+                <input type="hidden" name =".optout_blast" value="1" />
+                <input name="action" value="Unsubscribe" type="submit" />
+            </form>
+    </div>
+    <div class="message optout-all">
+        <p>If you wish to prevent ALL email contact from Billboard,
+        including forgotten password requests, etc, please click on the "Do Not Email" button below.</p>
+        <form action="" method="post">
+            <input type="hidden" name =".optout_all" value="1" />
+            <input name="action" value="Do Not Email" type="submit" />
+        </form>
+    </div><!-- end of .message optout-all -->
+</div><!-- end of #submission -->
+
+
+</form>
+</div><!-- end of container -->
+</body>
+</html>

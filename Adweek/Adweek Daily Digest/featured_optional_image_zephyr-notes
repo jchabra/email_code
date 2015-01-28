@@ -1,0 +1,25 @@
+{featured = first(filter(sort(content, "-date"), lambda c: contains(c.tags, "featured")))}
+
+{content = filter(content, lambda c: c.url != featured.url)}
+{if featured}
+  {subject_line = featured.title}
+  {articles = horizon_select(content, 9)}
+{else}
+  {articles = horizon_select(content, 10)}
+  {subject_line = content[0].title}
+{/if}
+
+
+{featured = supplied.content[0]}
+
+{if length(featured.image_url) > 0}
+<td width="211" valign="top">
+  <a href="{supplied.content[0].url}" style="text-decoration: none !important;">
+    <img src="{supplied.content[0].image_url}" alt="{supplied.content[0].hed}" style="display:block;" width="211" height="118" border="0">
+  </a>
+</td>
+{else}
+<td valign="top" width="1" style="border: 1px solid red;">
+  <img src="http://email-media.s3.amazonaws.com/adweek/daily/spacer.gif" style="display:block;" width="1" height="100%">
+</td>
+{/if}
